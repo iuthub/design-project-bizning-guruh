@@ -39,9 +39,11 @@ class AddressController extends Controller
         $this->validate($request,[
             'addressline'=>'required',
             'city'=>'required',
-            'state'=>'required',
-            'zip'=>'required|integer',
+            'country'=>'required',
             'phone'=>'required|integer',
+            'phone'=>'required|integer',
+            
+
         ]);
 
         Auth::user()->address()->create($request->all());
