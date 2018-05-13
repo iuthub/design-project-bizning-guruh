@@ -20,12 +20,12 @@ class CheckoutController extends Controller
 
     public function shipping()
     {
-        return view('user.shipping-info');
+        return view('pages.shipping-info');
     }
 
     public function payment()
     {
-        return view('user.payment');
+        return view('pages.payment');
     }
 
     public function storePayment(Request $request)
@@ -51,9 +51,9 @@ class CheckoutController extends Controller
 //       //Create the order
        Order::createOrder();
         Cart::destroy();
-        
+
         //redirect user to some page
-        return redirect()->route('omelas');
+        return redirect()->route('myshop');
 
     }
 

@@ -7,17 +7,7 @@
 		<div class="item-container">
 			<div class="container">
 				<div class="col-md-12">
-					<div class="product col-md-3 service-image-left">
-
-						<center>
-							<img id="item-display" src="{{url('images',$product->image)}}" alt=""></img>
-						</center>
-					</div>
-
-
-				</div>
-
-				<div class="col-md-7">
+		<img src="{{url('images',$product->image)}}" alt="img">
 					<div class="product-title">{{$product->name}}</div>
 					<div class="product-desc">{{$product->description}}</div>
 					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
@@ -26,9 +16,9 @@
 					<div class="product-stock">In Stock</div>
 					<hr>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Add to cart
-						</button>
+<a href="{{route('cart.addItem', $product->id)}}" class="button btn-success">
+Add to Cart</a>
+
 					</div>
 
 				</div>

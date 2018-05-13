@@ -24,37 +24,40 @@
                         </tr>
                     </thead>
                     <tbody>
+                       @foreach($cartItems as $cartItem)
                         <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Dada</td>
+                            <td><img src="{{url('images',$cartItem->image)}}" /> </td>
+                            <td>{{$cartItem->name}}</td>
                             <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">124,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                            <td width="50px">
+                       {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
+                       <input name="qty" type="text" value="{{$cartItem->qty}}">
+                   </td>
+                            <td class="text-right">$ {{$cartItem->price}}</td>
+                            <td>
+
+                   </td>
+                   <td>
+                       <input style="float: left"  type="submit" class="button success small" value="Ok">
+                       {!! Form::close() !!}
+
+                       <form action="{{route('cart.destroy',$cartItem->rowId)}}"  method="POST">
+                          {{csrf_field()}}
+                          {{method_field('DELETE')}}
+                          <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+
+                        </form>
+                   </td>
                         </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Toto</td>
-                            <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">33,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Titi</td>
-                            <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">70,00 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
+                        @endforeach
+
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Sub-Total</td>
-                            <td class="text-right">255,90 €</td>
+                            <td>Total</td>
+                            <td class="text-right">{{Cart::subtotal()}}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -62,15 +65,15 @@
                             <td></td>
                             <td></td>
                             <td>Shipping</td>
-                            <td class="text-right">6,90 €</td>
+                            <td class="text-right">$ 0.00 </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>346,90 €</strong></td>
+                            <td><strong>Sub-Total</strong></td>
+                            <td class="text-right"><strong>{{Cart::subtotal()}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -82,7 +85,7 @@
                     <button class="btn btn-block btn-light">Continue Shopping</button>
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                    <a href="{{route('checkout.shipping')}}" class="btn btn-lg btn-block btn-success text-uppercase" type="submit">Checkout</a>
                 </div>
             </div>
         </div>

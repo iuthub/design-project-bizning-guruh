@@ -20,6 +20,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Help</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('cart.index')}}">
+          <i class="fa fa-shopping-cart"></i> Shopping Cart<span class="badge badge-secondary badge-pill"></span>
+        </a>
+      </li>
       @guest
       <li class="nav-item">
         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -28,11 +33,7 @@
         <a class="nav-link" href="{{ route('register') }}">Register</a>
       </li>
       @else
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('cart.index')}}">
-          <i class="fa fa-shopping-cart"></i> Shopping Cart<span class="badge badge-secondary badge-pill"></span>
-        </a>
-      </li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://Ecommerce/user" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img style="width: 25px; border-radius: 50%;" src="{{asset('pages/images/user.png')}}" alt="profile img">

@@ -23,7 +23,7 @@ class Order extends Model
     public static function createOrder(){
         $user=Auth::user();
         $order=$user->orders()->create([
-            'total'=>Cart::subtotal(),
+            'total'=>Cart::total(),
             'delivered'=>0
         ]);
 
