@@ -42,9 +42,15 @@ class AddressController extends Controller
             'addressline'=>'required',
             'city'=>'required',
             'country'=>'required',
+<<<<<<< HEAD
             'phone'=>'required|integer',
             'phone'=>'required|integer',
 
+=======
+            'phone'=>'required|integer',
+            'phone'=>'required|integer',
+            
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
 
         ]);
 

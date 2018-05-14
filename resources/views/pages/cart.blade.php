@@ -25,8 +25,14 @@
                     <tbody>
                        @foreach($cartItems as $cartItem)
                         <tr>
+<<<<<<< HEAD
                             <td>{{$cartItem->name}}</td>
                             <td>Description</td>
+=======
+                            <td><img src="{{url('images',$cartItem->image)}}" /> </td>
+                            <td>{{$cartItem->name}}</td>
+                            <td>In stock</td>
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
                             <td width="50px">
                        {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
                        <input name="qty" type="text" value="{{$cartItem->qty}}">
@@ -55,7 +61,11 @@
                             <td></td>
                             <td></td>
                             <td>Total</td>
+<<<<<<< HEAD
                             <td class="text-right">$ {{Cart::subtotal()}}</td>
+=======
+                            <td class="text-right">{{Cart::subtotal()}}</td>
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
                         </tr>
                         <tr>
                             <td></td>
@@ -71,7 +81,11 @@
                             <td></td>
                             <td></td>
                             <td><strong>Sub-Total</strong></td>
+<<<<<<< HEAD
                             <td class="text-right"><strong>$ {{Cart::subtotal()}}</strong></td>
+=======
+                            <td class="text-right"><strong>{{Cart::subtotal()}}</strong></td>
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
                         </tr>
                     </tbody>
                 </table>

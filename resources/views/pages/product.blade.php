@@ -2,9 +2,18 @@
 @section('title', 'Product')
 
 @section('main-content')
+<<<<<<< HEAD
 <div class="container">
 
 		<img src="{{url('images',$product->image)}}" height="400px" width="300" alt="img">
+=======
+<div class="container-fluid">
+    <div class="content-wrapper">
+		<div class="item-container">
+			<div class="container">
+				<div class="col-md-12">
+		<img src="{{url('images',$product->image)}}" alt="img">
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
 					<div class="product-title">{{$product->name}}</div>
 
 					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
@@ -12,10 +21,18 @@
 					<div class="product-price">$ {{$product->price}}</div>
 					<div class="product-stock">In Stock</div>
 					<hr>
+<<<<<<< HEAD
             <a href="{{route('cart.addItem', $product->id)}}"
   class="button btn-success">
       Add to Cart</a>
 
+=======
+					<div class="btn-group cart">
+<a href="{{route('cart.addItem', $product->id)}}" class="button btn-success">
+Add to Cart</a>
+
+					</div>
+>>>>>>> 1c43c076b96eb913ffd58e297d1377410b62a1ad
 
 		<div class="container-fluid">
 			<div class="col-md-12 product-info">
