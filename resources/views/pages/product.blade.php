@@ -2,28 +2,21 @@
 @section('title', 'Product')
 
 @section('main-content')
-<div class="container-fluid">
-    <div class="content-wrapper">
-		<div class="item-container">
-			<div class="container">
-				<div class="col-md-12">
-		<img src="{{url('images',$product->image)}}" alt="img">
+<div class="container">
+
+		<img src="{{url('images',$product->image)}}" height="400px" width="300" alt="img">
 					<div class="product-title">{{$product->name}}</div>
-					<div class="product-desc">{{$product->description}}</div>
+
 					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
 					<hr>
 					<div class="product-price">$ {{$product->price}}</div>
 					<div class="product-stock">In Stock</div>
 					<hr>
-					<div class="btn-group cart">
-<a href="{{route('cart.addItem', $product->id)}}" class="button btn-success">
-Add to Cart</a>
+            <a href="{{route('cart.addItem', $product->id)}}"
+  class="button btn-success">
+      Add to Cart</a>
 
-					</div>
 
-				</div>
-			</div>
-		</div>
 		<div class="container-fluid">
 			<div class="col-md-12 product-info">
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
@@ -37,32 +30,19 @@ Add to Cart</a>
 						<div class="tab-pane fade in active" id="service-one">
 
 							<section class="container product-info">
-								The Corsair Gaming Series GS600 power supply is the ideal price-performance solution for building or upgrading a Gaming PC. A single +12V rail provides up to 48A of reliable, continuous power for multi-core gaming PCs with multiple graphics cards. The ultra-quiet, dual ball-bearing fan automatically adjusts its speed according to temperature, so it will never intrude on your music and games. Blue LEDs bathe the transparent fan blades in a cool glow. Not feeling blue? You can turn off the lighting with the press of a button.
-
-								<h3>Corsair Gaming Series GS600 Features:</h3>
-								<li>It supports the latest ATX12V v2.3 standard and is backward compatible with ATX12V 2.2 and ATX12V 2.01 systems</li>
-								<li>An ultra-quiet 140mm double ball-bearing fan delivers great airflow at an very low noise level by varying fan speed in response to temperature</li>
-								<li>80Plus certified to deliver 80% efficiency or higher at normal load conditions (20% to 100% load)</li>
-								<li>0.99 Active Power Factor Correction provides clean and reliable power</li>
-								<li>Universal AC input from 90~264V — no more hassle of flipping that tiny red switch to select the voltage input!</li>
-								<li>Extra long fully-sleeved cables support full tower chassis</li>
-								<li>A three year warranty and lifetime access to Corsair’s legendary technical support and customer service</li>
-								<li>Over Current/Voltage/Power Protection, Under Voltage Protection and Short Circuit Protection provide complete component safety</li>
-								<li>Dimensions: 150mm(W) x 86mm(H) x 160mm(L)</li>
-								<li>MTBF: 100,000 hours</li>
-								<li>Safety Approvals: UL, CUL, CE, CB, FCC Class B, TÜV, CCC, C-tick</li>
+							{{$product->description}}
 							</section>
 
 						</div>
 					<div class="tab-pane fade" id="service-two">
 
 						<section class="container">
-
+<p>Lorem ipsum dolor sit adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur <br>sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt <br>mollit anim id est laborum.</p>
 						</section>
 
 					</div>
 					<div class="tab-pane fade" id="service-three">
-
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt <br>in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
 				<hr>
@@ -70,4 +50,5 @@ Add to Cart</a>
 		</div>
 	</div>
 </div>
+
 @endsection

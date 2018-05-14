@@ -15,9 +15,8 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col"> </th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Available</th>
+                            <th scope="col">Product name</th>
+                            <th scope="col">Short Description</th>
                             <th scope="col" class="text-center">Quantity</th>
                             <th scope="col" class="text-right">Price</th>
                             <th> </th>
@@ -26,9 +25,8 @@
                     <tbody>
                        @foreach($cartItems as $cartItem)
                         <tr>
-                            <td><img src="{{url('images',$cartItem->image)}}" /> </td>
                             <td>{{$cartItem->name}}</td>
-                            <td>In stock</td>
+                            <td>Description</td>
                             <td width="50px">
                        {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
                        <input name="qty" type="text" value="{{$cartItem->qty}}">
@@ -57,7 +55,7 @@
                             <td></td>
                             <td></td>
                             <td>Total</td>
-                            <td class="text-right">{{Cart::subtotal()}}</td>
+                            <td class="text-right">$ {{Cart::subtotal()}}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -73,7 +71,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>Sub-Total</strong></td>
-                            <td class="text-right"><strong>{{Cart::subtotal()}}</strong></td>
+                            <td class="text-right"><strong>$ {{Cart::subtotal()}}</strong></td>
                         </tr>
                     </tbody>
                 </table>

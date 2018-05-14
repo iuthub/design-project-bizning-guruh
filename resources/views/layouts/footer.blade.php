@@ -1,50 +1,48 @@
 <div class="container">
        <div class="row">
-           <div class="col-md-3 col-lg-4 col-xl-3">
-               <h5>About</h5>
-               <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-               <p class="mb-0">
-                   Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-               </p>
+       <div class="col-sm-3">
+           <h4 class="title">E-commerce</h4>
+           <p>Online Ecommerce with good qualities and with best proudcts
+           <br>Find your product and shop here</p>
+           <ul class="social-icon">
+           <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+           <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+           <a href="#" class="social"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+           <a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+           <a href="#" class="social"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+           </ul>
            </div>
-
-           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-               <h5>Informations</h5>
-               <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-               <ul class="list-unstyled">
-                   <li><a href="">Link 1</a></li>
-                   <li><a href="">Link 2</a></li>
-                   <li><a href="">Link 3</a></li>
-                   <li><a href="">Link 4</a></li>
-               </ul>
+       <div class="col-sm-3">
+           <h4 class="title">My Account</h4>
+           <span class="acount-icon">
+           <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Wish List</a>
+           <a href="{{route('cart.index')}}"><i class="fa fa-cart-plus" aria-hidden="true"></i> Cart</a>
+           <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+           <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Language</a>
+         </span>
            </div>
-
-           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
-               <h5>Others links</h5>
-               <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-               <ul class="list-unstyled">
-                   <li><a href="">Link 1</a></li>
-                   <li><a href="">Link 2</a></li>
-                   <li><a href="">Link 3</a></li>
-                   <li><a href="">Link 4</a></li>
-               </ul>
+       <div class="col-sm-3">
+           <h4 class="title">Category</h4>
+           <div class="category">
+           <a href="{{route('computers')}}">Computers</a>
+            <a href="#">Headphones</a>
+           <a href="{{route('mobile')}}">Mobile phones</a>
+           <a href="#">Accessuars</a>
+           <a href="#">Bags</a>
            </div>
-
-           <div class="col-md-4 col-lg-3 col-xl-3">
-               <h5>Contact</h5>
-               <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-               <ul class="list-unstyled">
-                   <li><i class="fa fa-home mr-2"></i> MyShop.uz</li>
-                   <li><i class="fa fa-envelope mr-2"></i> myshop_2018@gmail.com</li>
-                   <li><i class="fa fa-phone mr-2"></i> + 99 897 737 35 38</li>
-                   <li><i class="fa fa-print mr-2"></i> + 99 897 711 10 09</li>
-               </ul>
            </div>
-           <div class="col-12 copyright mt-3">
-               <p class="float-left">
-                   <a href="#">Back to top</a>
-               </p>
-               <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href=""><i>Laravel-PHP</i></a> | <span>v. 1.0</span></p>
+       <div class="col-sm-3">
+           <h4 class="title">Payment Methods</h4>
+           <p>You can do easily payment in here.</p>
+           <ul class="payment">
+           <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+           <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+           <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+           <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+           </ul>
            </div>
        </div>
-   </div>
+       <hr>
+       <div class="row text-center"> © 2018. Made by "Bizning Guruh"</div>
+       </div>

@@ -1,14 +1,25 @@
 <?php
 
-Route::get('/', 'User\HomeController@index')->name('myshop');
-Route::get('products', 'User\HomeController@products')->name('products');
-Route::get('products/{product}', 'User\HomeController@product')->name('product');
-Auth::routes();
-Route::get('logout', 'Auth\LoginController@logout');
 
+Route::get('/', 'HomeController@index')->name('myshop');
+Route::get('products', 'HomeController@products')->name('products');
+Route::get('products/{product}', 'HomeController@product')->name('product');
+Route::get('mobile', 'HomeController@mobile')->name('mobile');
+Route::get('computer', 'HomeController@computer')->name('computers');
+Route::get('aboutus', 'HomeController@aboutus')->name('aboutus');
+
+
+
+Auth::routes();
 Route::resource('cart', 'CartController');
 Route::get('/cart/add-item/{id}', 'CartController@addItem')->name('cart.addItem');
+Route::get('logout', 'Auth\LoginController@logout');
+Route::group(['middleware'=> 'auth'], function (){
+Route::get('shipping-info', 'AddressController@index')->name('checkout.shipping');
 
+});
+
+Route::resource('address', 'AddressController');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function(){
   Route::post('toggledeliver/{orderId}', 'OrderController@toggledeliver')->name('toggle.deliver');
@@ -21,15 +32,3 @@ Route::resource('product', 'Admin\ProductsController');
 Route::resource('category', 'Admin\CategoriesController');
 Route::get('orders/{type?}', 'OrderController@Orders');
 });
-
-Route::resource('address', 'AddressController');
-
-Route::group(['middleware'=> 'auth'], function (){
-Route::get('shipping-info', 'CheckOutController@shipping')->name('checkout.shipping');
-
-
-});
-
-// Route::get('checkout', 'CheckOutController@step1');
-Route::get('payment', 'CheckOutController@payment')->name('checkout.payment');
-Route::post('store-payment','CheckOutController@storePayment')->name('payment.store');

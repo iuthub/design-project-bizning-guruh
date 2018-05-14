@@ -1,7 +1,170 @@
-footer {
-    background: #343a40;
-    padding: 40px;
+
+.top-bar{background-color:black;min-height:40px;padding-top:5px;padding-bottom: 0px;}
+.top-bar .nav-text {
+    color: #00BCD4;
+    display: block;
+    margin-top: 5px;
 }
-footer a {
-    color: #f8f9fa!important
+.top-bar .social{color:#FFF;display:inline-block;padding:5px;text-decoration: none;}
+
+.top-bar .tools{margin:0px;padding:0px;list-style-type:none;}
+.top-bar .tools li{list-style-type: none;display:inline-block;}
+.top-bar .tools li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 15px;
+    padding-top: 5px;
 }
+.navbar-inverse {
+    background-color: #009688;
+    border-color: #080808;
+}
+.navbar {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 0px;
+    border: 0px solid #000;;
+    border-radius:0px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 11px;}
+
+.form-control{
+    border-color:#fff;
+    border-radius:0px;
+    background-color:transparent;
+}
+
+.btn-default-1 {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    border-radius: 0px;
+}
+.dropdown-item a{
+  background-color: black;
+  color: black;
+
+}
+.dropdown-menu a{
+  color: black;
+
+}
+.cart-heart a{
+  display:inline-block;color:#fff;font-size:20px;padding:5px;
+}
+
+/*CROUSELE START///////////////////////////*/
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 35px;
+    width: 60%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+@media screen and (min-width:768px){
+    .carousel-caption h3{font-size: 52px;}
+    .carousel-caption p{font-size: 32px;}
+    .carousel-caption{padding-bottom:160px;}
+}
+
+
+/*FOOTER START///////////////////*/
+
+.footer {
+    padding: 10px 0 5px 0;
+    background-color: #35404f;
+    color: #878c94;
+}
+.footer .title{
+  text-align: left;
+  color:#fff;
+  font-size:18px;
+}
+
+
+.footer .social-icon{padding:0px;margin:0px;}
+.footer .social-icon a{display:inline-block;color:#fff;font-size:18px;padding:5px;}
+.footer .acount-icon a{display:block;color:#fff;font-size:18px;padding:5px;text-decoration:none;}
+.footer .acount-icon .fa{margin-right:18px;}
+
+
+.footer .category a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 1px;
+    border-radius:4px;
+    margin-top: 6px;
+    background-color: black;
+    border: solid 1px #fff;
+}
+
+.footer .payment{margin:0px;padding:0px;list-style-type:none}
+.footer .payment li{list-style-type:none}
+.footer .payment li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    float: left;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+
+
+
+.shadow{width:100%; float:left;box-shadow:0 0 10px #000;}
+.img-wrap-tailor a{display:block}
+.img-wrap-tailor{    width: 100%;
+float: left;
+overflow: hidden;
+height: 300px;
+position: relative;}
+.img-wrap-tailor span{    position: absolute;
+background: #ff6600;
+width: 100%;
+left: 0;
+bottom: 0;
+text-align: center;
+padding: 5px 0;
+font-size: 19px;
+color: #fff;}
+.box-customn{    width: 100%;
+float: left;
+border: 1px solid #ccc;
+margin: 15px 0;box-shadow:0 0 5px #000;}
+.box-customn .imfo-area{width:100%; float:left;text-align:center;}
+.box-customn .imfo-area h3{    margin: 0px;
+padding: 0px;
+color: #0c0c0c;
+font-size: 21px;
+line-height: 30px;
+font-weight: 600;
+text-transform: uppercase;}
+.box-customn .imfo-area p{margin: 0px;padding:5px 0px;font-size:14px;}
+.box-customn .imfo-area h4{color: #ff0000;
+font-weight: bold;
+line-height: 30px;
+font-size: 25px;}
+.img-wrap-tailor img{max-width:100%;}
+.box-customn a.onhover{display:none;}
+.box-customn:hover a.onhover{display:block;position:absolute;top:0px;left:0px;}
+.box-customn:hover a.nohover{display:none;}

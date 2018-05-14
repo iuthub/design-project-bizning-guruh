@@ -16,11 +16,12 @@
         <a class="nav-link" href="{{route('category.index')}}">Category</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Order</a>
+        <a class="nav-link" href="{{url('admin/orders')}}">Orders</a>
       </li>
 
+
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://Ecommerce/user" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img style="width: 25px; border-radius: 50%;" src="{{asset('pages/images/user.png')}}" alt="profile img">
           {{ Auth::user()->name }}
         </a>
